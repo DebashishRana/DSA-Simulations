@@ -13,7 +13,8 @@ class garden():
         self._capacity = None
         self._waterneed = None
         # Set through properties for validation
-        self.garden_name = garden_name
+        self.garden_name\
+            = garden_name
         self.capacity = capacity
         self.waterneed = waterneed
         # Regular attributes

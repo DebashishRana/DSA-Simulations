@@ -122,13 +122,7 @@ print(f'Stack set timing finding min val for 1 million records redundat quadrati
 
 """ An experiment to check the time efficiency of Hashmaps over stacks """
 
-
-
-
-
-
-
-# importing modules 
+//importing modules
 from timeit import Timer
 from random import randint
 
@@ -136,25 +130,25 @@ from random import randint
 ''' Experiment to prove list index function is O(1) notation '''
 # ie we have to prove that no matter the index we are accessing in a list the time taken to return it is constant
 
-# def return_first_index(stack):
-#   return stack[0]
+def return_first_index(stack):
+  return stack[0]
 
-# def return_middle_index(stack):
-#   mid_pos = len(stack)//2
-#   return stack[mid_pos]
+def return_middle_index(stack):
+  mid_pos = len(stack)//2
+  return stack[mid_pos]
 
-# def return_last_index(stack):
-#   return stack[-1]
+def return_last_index(stack):
+  return stack[-1]
 
-# data = [randint(1,1000000) for x in range(1000000)]
+data = [randint(1,1000000) for x in range(1000000)]
 
-# # experiments for proving the time complexity of list index function is o(1) ie constant 
+# experiments for proving the time complexity of list index function is o(1) ie constant
 
-# func1_time = timer(stmt="return_first_index(data)",
-#                   setup="from __main__ import return_first_index, data")
-# func2_time = timer(stmt="return_middle_index(data)",
-#                   setup="from __main__ import return_middle_index, data")
-# func3_time = timer(stmt="return_last_index(data)",
+func1_time = timer(stmt="return_first_index(data)",
+                  setup="from __main__ import return_first_index, data")
+func2_time = timer(stmt="return_middle_index(data)",
+                  setup="from __main__ import return_middle_index, data")
+func3_time = timer(stmt="return_last_index(data)",
 #                   setup="from __main__ import return_last_index, data")
 
 t1 = round((func1_time.timeit(number=1)),4)
@@ -164,10 +158,10 @@ print(f'time taken to access the middle index in the list is {t1} seconds \n')
 t3 = round((func3_time.timeit(number=1)),4)
 print(f'time taken to access the last index in the list is {t1} seconds \n')
 
-# if t1==t2==t3:
-#   print(f"hence proven \ntime taken to access the first middle and the last index element in a list is constant as the difference is {round(t1,4)} seocnds")
-# else:
-#   print(f"time taken to access the first middle and the last index element in a list is not constant the difference is {round(t1-t2,4)} seoncds and {round(t2-t3,4)}seconds")
+if t1==t2==t3:
+  print(f"hence proven \ntime taken to access the first middle and the last index element in a list is constant as the difference is {round(t1,4)} seocnds")
+else:
+  print(f"time taken to access the first middle and the last index element in a list is not constant the difference is {round(t1-t2,4)} seoncds and {round(t2-t3,4)}seconds")
 
 
 
