@@ -3,7 +3,7 @@ from functools import  wraps
 
 def log_method(func):
     @wraps(func)
-    def wrapper (self,*args,**kwargs):
+    def wrapper (self,*args,**kwargs):p
         result = func(self,*args,**kwargs)
         return result
     return wrapper
@@ -37,7 +37,7 @@ class Node:
         self.node = new_data
 
     if __name__ == "__main__":
-        Node()
+        Node
 
 # Test Cases
 
